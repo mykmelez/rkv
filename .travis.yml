@@ -20,10 +20,15 @@ matrix:
   include:
     # Android
     - env: TARGET=aarch64-linux-android
+      rust: beta
     - env: TARGET=arm-linux-androideabi
+      rust: beta
     - env: TARGET=armv7-linux-androideabi
+      rust: beta
     - env: TARGET=i686-linux-android
+      rust: beta
     - env: TARGET=x86_64-linux-android
+      rust: beta
 
     # iOS
     # - env: TARGET=aarch64-apple-ios DISABLE_TESTS=1
