@@ -135,11 +135,11 @@ mod tests {
 
         let mut manager = Manager::new();
 
-        let p = root.path();
-        assert!(manager.get(p).expect("success").is_none());
+        let p: PathBuf = root.path().to_path_buf();
+        assert!(manager.get(p.as_path()).expect("success").is_none());
 
-        let created_arc = manager.get_or_create(p, Rkv::new).expect("created");
-        let fetched_arc = manager.get(p).expect("success").expect("existed");
+        let created_arc = manager.get_or_create(p.as_path(), Rkv::new).expect("created");
+        let fetched_arc = manager.get(p.as_path()).expect("success").expect("existed");
         assert!(Arc::ptr_eq(&created_arc, &fetched_arc));
     }
 

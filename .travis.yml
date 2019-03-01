@@ -19,16 +19,16 @@ matrix:
   # don't need
   include:
     # Android
-    - env: TARGET=aarch64-linux-android
-      rust: beta
-    - env: TARGET=arm-linux-androideabi
-      rust: beta
-    - env: TARGET=armv7-linux-androideabi
-      rust: beta
-    - env: TARGET=i686-linux-android
-      rust: beta
-    - env: TARGET=x86_64-linux-android
-      rust: beta
+    - env: TARGET=aarch64-linux-android DISABLE_RUN=1
+      rust: nightly
+    - env: TARGET=arm-linux-androideabi DISABLE_RUN=1
+      rust: nightly
+    - env: TARGET=armv7-linux-androideabi DISABLE_RUN=1
+      rust: nightly
+    - env: TARGET=i686-linux-android DISABLE_RUN=1
+      rust: nightly
+    - env: TARGET=x86_64-linux-android DISABLE_RUN=1
+      rust: nightly
 
     # iOS
     # - env: TARGET=aarch64-apple-ios DISABLE_TESTS=1

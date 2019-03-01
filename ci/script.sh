@@ -14,6 +14,10 @@ main() {
     cross test --target $TARGET
     cross test --target $TARGET --release
 
+    if [ ! -z $DISABLE_RUN ]; then
+        return
+    fi
+
     cross run --target $TARGET
     cross run --target $TARGET --release
 }
